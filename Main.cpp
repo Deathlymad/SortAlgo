@@ -121,9 +121,10 @@ int main(int argc, char *argv[])
 		}
 		f.close();
 
+		std::chrono::high_resolution_clock::time_point pt = std::chrono::high_resolution_clock::now();
 		if (spec == "quick")
 			quickSort( &temp, 0, temp.size() - 1);
-
+		std::cout << "done in " << (std::chrono::high_resolution_clock::now() - pt).count() << " ns" << std::endl;
 		std::ofstream o("sortFile.bin");
 		if (!o.is_open())
 			return 0;
