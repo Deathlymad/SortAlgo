@@ -134,5 +134,4 @@ int main(int argc, char *argv[])
 		}
 		o.close();
 	}
-	system("pause");
 }
